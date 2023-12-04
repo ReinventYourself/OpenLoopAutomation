@@ -9,7 +9,7 @@ import api.endpoints.UserEndPoints;
 import api.payload.User;
 import api.utilities.Dataproviders;
 import io.restassured.response.Response;
-
+// Data Driven testing 
 public class DDTests {
 	
 	@Test(priority =1, dataProvider="Data", dataProviderClass=Dataproviders.class)
