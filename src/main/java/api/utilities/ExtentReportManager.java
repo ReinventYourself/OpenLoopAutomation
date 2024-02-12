@@ -20,7 +20,8 @@ public class ExtentReportManager implements ITestListener {
 	
 	String repName; 
 	
-	public void onStart(ITestContext testContext) {
+	public void onStart(ITestContext context) {
+		
 		
 	 String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 	 repName = "Test-Report-"+timeStamp+".html";

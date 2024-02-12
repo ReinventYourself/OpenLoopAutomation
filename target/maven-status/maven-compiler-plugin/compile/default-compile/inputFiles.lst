@@ -1,8 +1,10 @@
 C:\RestAssuredAutomation\src\main\java\api\endpoints\UserEndPoints.java
+C:\RestAssuredAutomation\src\main\java\api\utilities\CustomValidationFailureListener.java
 C:\RestAssuredAutomation\src\main\java\api\endpoints\Routes.java
 C:\RestAssuredAutomation\src\main\java\api\utilities\Dataproviders.java
 C:\RestAssuredAutomation\src\main\java\api\test\DDTests.java
 C:\RestAssuredAutomation\src\main\java\api\test\UserTests.java
+C:\RestAssuredAutomation\src\main\java\api\utilities\Utils.java
 C:\RestAssuredAutomation\src\main\java\api\utilities\XLUtility.java
 C:\RestAssuredAutomation\src\main\java\api\utilities\ExtentReportManager.java
 C:\RestAssuredAutomation\src\main\java\api\payload\User.java
