@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -25,26 +26,14 @@ import io.restassured.response.Response;
 
 public class UserTests {
 
-	Faker faker;
-	User userPayload;
-	String name;
-    Logger log;
-    
+	Logger log;
+    JSONObject jo;
+	
 	@BeforeClass
 	public void setUpData() {
-		faker = new Faker();
-		userPayload = new User();
-		userPayload.setId(faker.number().hashCode());
-		name = faker.name().username();
-		userPayload.setUsername(name);
-		userPayload.setFirstName(faker.name().firstName());
-		userPayload.setLastName(faker.name().lastName());
-		userPayload.setEmail(faker.internet().safeEmailAddress());
-		userPayload.setPassword(faker.internet().password());
-		userPayload.setPhone(faker.phoneNumber().cellPhone());
-	    log = LogManager.getLogger(this.getClass());
-	   Utils.requestBuilder();
-	  	}
+	  log = LogManager.getLogger(this.getClass());
+	  
+	}
 	
 	
 	@Test()

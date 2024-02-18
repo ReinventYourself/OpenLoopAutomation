@@ -1,0 +1,35 @@
+{
+    "programName": "guitar_answer",
+    "orderItems": [
+        {
+            "initialLoadAmount": "1000",
+            "cardData": {
+                "name3": "",
+                "name4": "",
+                "activationLabel": "",
+                "activationAnswer": "test",
+                "pin": "",
+                "mailerText": ""
+            },
+            "quantity": "5",
+            "externalReference": "",
+            "productIdName": ""
+        }
+    ],
+    "bulkShipMethodType": "1st Class",
+    "bulkShipmentAddress": {
+        "streetLines": [
+            "Starwoods",
+             9999120
+        ],
+        "city": "Woodridge",
+        "country": "US",
+        "zip": "65017",
+        "state": "NY",
+        "region": "",
+        "postalCode": "",
+        "companyName": "RSI"
+    },
+    "bulkShipVendor": "UPS",
+    "externalReference": ""
+}

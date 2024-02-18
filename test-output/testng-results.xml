@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-09T23:38:57 IST" name="Default suite" finished-at="2024-02-09T23:39:02 IST" duration-ms="4729">
+  <suite started-at="2024-02-17T20:18:50 IST" name="OpenLoopSuite1" finished-at="2024-02-17T20:19:01 IST" duration-ms="10976">
     <groups>
     </groups>
-    <test started-at="2024-02-09T23:38:57 IST" name="Default test" finished-at="2024-02-09T23:39:02 IST" duration-ms="4729">
-      <class name="api.test.UserTests">
-        <test-method is-config="true" signature="setUpData()[pri:0, instance:api.test.UserTests@5e600dd5]" started-at="2024-02-09T23:38:57 IST" name="setUpData" finished-at="2024-02-09T23:38:58 IST" duration-ms="1348" status="PASS">
+    <test started-at="2024-02-17T20:18:50 IST" name="Test" finished-at="2024-02-17T20:19:01 IST" duration-ms="10976">
+      <class name="api.test.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:api.test.LoginTest@4a883b15]" started-at="2024-02-17T20:18:50 IST" name="setup" finished-at="2024-02-17T20:18:50 IST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUpData()[pri:0, instance:api.test.LoginTest@4a883b15]" started-at="2024-02-17T20:18:50 IST" name="setUpData" finished-at="2024-02-17T20:18:50 IST" duration-ms="467" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpData -->
-        <test-method signature="Createuserfirst()[pri:0, instance:api.test.UserTests@5e600dd5]" started-at="2024-02-09T23:38:58 IST" name="Createuserfirst" finished-at="2024-02-09T23:39:02 IST" duration-ms="3347" status="PASS">
+        <test-method signature="getToken()[pri:0, instance:api.test.LoginTest@4a883b15]" started-at="2024-02-17T20:18:50 IST" name="getToken" description="Get Token" finished-at="2024-02-17T20:18:54 IST" duration-ms="3736" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Createuserfirst -->
-      </class> <!-- api.test.UserTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- getToken -->
+        <test-method signature="getTokenWithoutPassword()[pri:0, instance:api.test.LoginTest@4a883b15]" started-at="2024-02-17T20:18:54 IST" name="getTokenWithoutPassword" description="Veriy Token Without Passing Password" finished-at="2024-02-17T20:18:55 IST" duration-ms="1207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTokenWithoutPassword -->
+        <test-method signature="getTokenWithoutUserName()[pri:0, instance:api.test.LoginTest@4a883b15]" started-at="2024-02-17T20:18:55 IST" name="getTokenWithoutUserName" description="Veriy Token Without Passing username" finished-at="2024-02-17T20:19:00 IST" duration-ms="4129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTokenWithoutUserName -->
+        <test-method signature="getTokenWithoutclientId()[pri:0, instance:api.test.LoginTest@4a883b15]" started-at="2024-02-17T20:19:00 IST" name="getTokenWithoutclientId" description="Veriy Token Without Passing ClientID" finished-at="2024-02-17T20:19:01 IST" duration-ms="1169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTokenWithoutclientId -->
+        <test-method is-config="true" signature="SendEmail()[pri:0, instance:api.test.LoginTest@4a883b15]" started-at="2024-02-17T20:19:01 IST" name="SendEmail" finished-at="2024-02-17T20:19:07 IST" duration-ms="5535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendEmail -->
+      </class> <!-- api.test.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- OpenLoopSuite1 -->
 </testng-results>

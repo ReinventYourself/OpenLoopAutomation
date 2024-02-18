@@ -1,0 +1,35 @@
+{
+    "programName": "Guitar_in",
+    "orderItems": [
+        {
+            "initialLoadAmount": "1000",
+            "cardData": {
+                "name3": "",
+                "name4": "",
+                "activationLabel": "Activation Label",
+                "activationAnswer": "test",
+                "pin": "",
+                "mailerText": "Mail"
+            },
+            "quantity": "5",
+            "externalReference": "",
+            "productIdName": ""
+        }
+    ],
+    "bulkShipMethodType": "1st Class",
+    "bulkShipmentAddress": {
+        "streetLines": [
+            "6440 main st1",
+            "suite 200"
+        ],
+        "city": "Woodridge",
+        "country": "US",
+        "zip": "65017",
+        "state": "IL",
+        "region": "",
+        "postalCode": "",
+        "companyName": "RSI"
+    },
+    "bulkShipVendor": "",
+    "externalReference": ""
+}

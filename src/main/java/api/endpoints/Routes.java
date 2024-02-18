@@ -1,18 +1,17 @@
 package api.endpoints;
 
-//http://svm-ms-qa-us.centralus.cloudapp.azure.com/api/tokens/token
+import org.testng.annotations.BeforeSuite;
 
+import api.utilities.ConfigManager;
 
-public class Routes {
-	 	
-public static String base_url ="https://petstore.swagger.io/v2";
+public class Routes  {
+	
+	// Order Module
+	public static String Token_post =ConfigManager.base_url+"/api/tokens/token";	
 
-//User model
-public static String post_url =base_url+"/user";
-public static String get_url =base_url+"/user/{username}";
-public static String update_url =base_url+"/user/{username}";
-public static String delete_url =base_url+"/user/{username}";
-
+	public static String PlaceNonPersonalizedOrder_post= ConfigManager.base_url+"/client/orderservice/PlaceNonPersonalizedOrder";
+	
+	public static String PlacePersonalizedOrder_post=ConfigManager.base_url+"/client/orderservice/PlacePersonalizedOrder";
 
 
 }

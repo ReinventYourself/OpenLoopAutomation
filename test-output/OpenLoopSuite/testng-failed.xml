@@ -6,12 +6,20 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="api.test.UserTests">
+      <class name="api.test.LoginTest">
+        <methods>
+          <include name="getToken"/>
+          <include name="setUpData"/>
+        </methods>
+      </class> <!-- api.test.LoginTest -->
+      <class name="api.test.PlacePersonalizedOrderTest">
         <methods>
           <include name="setUpData"/>
-          <include name="createUser"/>
+          <include name="readpayload"/>
+          <include name="placeNonPersonalizedOrder"/>
+          <include name="placeNonPersonalizedOrder1"/>
         </methods>
-      </class> <!-- api.test.UserTests -->
+      </class> <!-- api.test.PlacePersonalizedOrderTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [OpenLoopSuite] -->

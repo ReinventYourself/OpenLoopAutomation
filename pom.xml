@@ -2,8 +2,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>OpenLoopAutomation</groupId>
-	<artifactId>OpenLoopAutomation</artifactId>
+	<groupId>OpenLoopAutomation2</groupId>
+	<artifactId>OpenLoopAutomation2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<pluginManagement>
@@ -26,6 +26,7 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	
 	<dependencies>
 		<dependency>
 			<groupId>io.rest-assured</groupId>
@@ -38,6 +39,12 @@
 			<artifactId>json-path</artifactId>
 			<version>5.3.2</version>
 		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
@@ -118,8 +125,15 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.30</version>
 		</dependency>
+		
+<!-- htps://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-email</artifactId>
+    <version>1.5</version>
+</dependency>
+
 
 	</dependencies>
-
 
 </project>

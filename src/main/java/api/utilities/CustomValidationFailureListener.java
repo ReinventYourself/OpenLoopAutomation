@@ -10,7 +10,7 @@ public class CustomValidationFailureListener implements ResponseValidationFailur
 	@Override
 	public void onFailure(RequestSpecification requestSpecification, ResponseSpecification responseSpecification,
 			Response response) {
-		   System.out.println("Custom Validation Failure Listener triggered!");
+		    System.out.println("Custom Validation Failure Listener triggered!");
 	        System.out.println("Response status code: " + response.getStatusCode());
 	        System.out.println("Response body: " + response.getBody().asString());
 	}
