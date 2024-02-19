@@ -50,7 +50,6 @@ public class ConfigManager {
 
 	public static void SendMailSSLWithAttachment() {
 
-	
 		// Create object of Property file
 		Properties props = new Properties();
 
@@ -71,11 +70,10 @@ public class ConfigManager {
 
 		// set the port of SMTP server
 		props.put("mail.smtp.port", "465");
-		
-	
+
 		final String userName = "gauravs2089@gmail.com";
 		final String passWord = "kimy vsju teti bwtk";
-		
+
 		// This will handle the complete authentication
 		Session session = Session.getInstance(props,
 
@@ -87,8 +85,6 @@ public class ConfigManager {
 					}
 
 				});
-		session.setDebug(true);
-
 		try {
 
 			// Create object of MimeMessage class
@@ -105,11 +101,24 @@ public class ConfigManager {
 
 			// Create object to add multimedia type content
 			BodyPart messageBodyPart = new MimeBodyPart();
-    
-			String messageBody = "Hi ,\n\nPlease find the attached executed report.\n\nThanks,\nSVM Testing Team";
 
+			String messageBody = "<html>\r\n" + "  <body style='font-family: Arial, sans-serif;'>\r\n"
+					+ "    <div style='margin: 20px;'>\r\n" + "      <p style='margin-bottom: 20px;'>Hi,</p>\r\n"
+					+ "      <p>Below is the test result summary</p> <!-- Added line -->\r\n"
+					+ "      <table border='1' cellpadding='10' style='border-collapse: collapse; width: 50%;'>\r\n"
+					+ "        <tr style='background-color: #f2f2f2;'>\r\n"
+					+ "          <th style='padding: 10px; width: 30px;'><strong>Result</strong></th>\r\n"
+					+ "          <th style='padding: 10px; width: 30px;'><strong>Count</strong></th>\r\n"
+					+ "        </tr>\r\n" + "        <tr>\r\n"
+					+ "          <td style='padding: 10px; width: 30px;'>Pass</td>\r\n"
+					+ "          <td style='padding: 10px; width: 30px;'>" + ExtentReportManager.passCount + "</td>\r\n"
+					+ "        </tr>\r\n" + "        <tr>\r\n"
+					+ "          <td style='padding: 10px; width: 30px;'>Fail</td>\r\n"
+					+ "          <td style='padding: 10px; width: 30px;'>" + ExtentReportManager.failCount + "</td>\r\n"
+					+ "        </tr>\r\n" + "      </table>\r\n" + "      <p style='margin-top: 20px;'>Thanks,</p>\r\n"
+					+ "      <p>SVM Testing Team</p>\r\n" + "    </div>\r\n" + "  </body>\r\n" + "</html>\r\n" + "";
 			// Set the body of email
-			messageBodyPart.setText(messageBody);
+			messageBodyPart.setContent(messageBody, "text/html; charset=utf-8");
 
 			// Create another object to add another content
 			MimeBodyPart messageBodyPart2 = new MimeBodyPart();

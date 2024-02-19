@@ -9,13 +9,37 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">OpenLoopSuite1</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">10,976</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">32,631</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OpenLoopSuite1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">api.test.LoginTest</td><td><a href="#m0">getToken</a></td><td rowspan="1">1708181330967</td><td rowspan="1">3736</td></tr><tr class="passedeven"><td><a href="#m1">getTokenWithoutPassword</a></td><td rowspan="1">1708181334710</td><td rowspan="1">1207</td></tr><tr class="passedeven"><td><a href="#m2">getTokenWithoutUserName</a></td><td rowspan="1">1708181335918</td><td rowspan="1">4129</td></tr><tr class="passedeven"><td><a href="#m3">getTokenWithoutclientId</a></td><td rowspan="1">1708181340048</td><td rowspan="1">1169</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OpenLoopSuite1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">api.test.PlacePersonalizedOrderTest</td><td><a href="#m0">placeNonPersonalizedOrder1</a></td><td rowspan="1">1708323836719</td><td rowspan="1">7620</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">api.test.LoginTest</td><td><a href="#m1">getToken</a></td><td rowspan="1">1708323812530</td><td rowspan="1">3982</td></tr><tr class="passedeven"><td><a href="#m2">getTokenWithoutPassword</a></td><td rowspan="1">1708323816519</td><td rowspan="1">1251</td></tr><tr class="passedeven"><td><a href="#m3">getTokenWithoutUserName</a></td><td rowspan="1">1708323817772</td><td rowspan="1">1069</td></tr><tr class="passedeven"><td><a href="#m4">getTokenWithoutclientId</a></td><td rowspan="1">1708323818842</td><td rowspan="1">1134</td></tr><tr class="passedodd"><td rowspan="2">api.test.PlacePersonalizedOrderTest</td><td><a href="#m5">placeNonPersonalizedOrder</a></td><td rowspan="1">1708323821927</td><td rowspan="1">14791</td></tr><tr class="passedodd"><td><a href="#m6">readpayload</a></td><td rowspan="1">1708323844356</td><td rowspan="1">5</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">api.test.LoginTest#getToken</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">api.test.LoginTest#getTokenWithoutPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">api.test.LoginTest#getTokenWithoutUserName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">api.test.LoginTest#getTokenWithoutclientId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">api.test.PlacePersonalizedOrderTest#placeNonPersonalizedOrder1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at api.test.PlacePersonalizedOrderTest.placeNonPersonalizedOrder1(PlacePersonalizedOrderTest.java:44)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">api.test.LoginTest#getToken</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">api.test.LoginTest#getTokenWithoutPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">api.test.LoginTest#getTokenWithoutUserName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">api.test.LoginTest#getTokenWithoutclientId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">api.test.PlacePersonalizedOrderTest#placeNonPersonalizedOrder</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">api.test.PlacePersonalizedOrderTest#readpayload</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

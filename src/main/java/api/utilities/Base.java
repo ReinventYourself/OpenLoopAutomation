@@ -30,7 +30,6 @@ public class Base {
 			else
 			{
 				System.out.println("If you want to send the Test result Email then turn on the setting from the config");
-				//driver.quit();
 				
 			}
 			

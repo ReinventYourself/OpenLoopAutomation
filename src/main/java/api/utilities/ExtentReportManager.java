@@ -24,7 +24,8 @@ public class ExtentReportManager implements ITestListener {
 	public static String methodName;
 	public static String repName;
 	public static ThreadLocal<ExtentTest> extenttest = new ThreadLocal<>();
-
+   public static  int passCount=0;
+   public static int failCount =0;
 	public void onStart(ITestContext context) {
 
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
@@ -47,13 +48,14 @@ public class ExtentReportManager implements ITestListener {
 		test = extent.createTest(result.getMethod().getDescription());
 		extenttest.set(test);
 		methodName = result.getMethod().getDescription();
+		
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		test.assignCategory(result.getMethod().getGroups());
 		test.createNode(result.getName());
 		test.log(Status.PASS, "Test Passed");
-
+         passCount++;
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -68,6 +70,7 @@ public class ExtentReportManager implements ITestListener {
 		"	"+stacktrace+"\n" +
 			"</details>\n";
 		logFailuredetails(formatedTrace);
+	    failCount++;
 	}
 
 	public void onTestSkipped(ITestResult result) {
