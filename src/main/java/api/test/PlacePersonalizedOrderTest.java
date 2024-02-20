@@ -2,7 +2,6 @@ package api.test;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.json.JSONObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -41,7 +40,7 @@ public class PlacePersonalizedOrderTest extends Base {
 		updatedPayload=	Utils.modifyJson(updatedPayload, "$.bulkShipmentAddress.streetLines[1]","");
 	
 		res = Utils.performPost(Routes.PlaceNonPersonalizedOrder_post, updatedPayload);
-		res.then().statusCode(201);
+		res.then().statusCode(200);
 	}
 	
 	

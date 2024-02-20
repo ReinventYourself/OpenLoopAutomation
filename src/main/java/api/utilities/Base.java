@@ -12,7 +12,6 @@ public class Base {
 	    public void setup()
 	    {
 	        ConfigManager.loadConfig();
-	        //Routes.setURLs();
 	    }
 	 
 	 

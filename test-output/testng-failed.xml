@@ -6,11 +6,24 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="api.test.LoginTest">
+        <methods>
+          <include name="getTokenWithoutPassword"/>
+          <include name="SendEmail"/>
+          <include name="setup"/>
+          <include name="getTokenWithoutUserName"/>
+          <include name="getTokenWithoutclientId"/>
+          <include name="getToken"/>
+          <include name="setUpData"/>
+        </methods>
+      </class> <!-- api.test.LoginTest -->
       <class name="api.test.PlacePersonalizedOrderTest">
         <methods>
           <include name="SendEmail"/>
           <include name="setUpData"/>
+          <include name="readpayload"/>
           <include name="setup"/>
+          <include name="placeNonPersonalizedOrder"/>
           <include name="placeNonPersonalizedOrder1"/>
         </methods>
       </class> <!-- api.test.PlacePersonalizedOrderTest -->

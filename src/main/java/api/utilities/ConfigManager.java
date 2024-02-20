@@ -38,7 +38,7 @@ public class ConfigManager {
 		}
 
 		Env = prop.getProperty("Env", "QA");
-		System.out.print(Env);
+		//System.out.print(Env);
 
 		if (Env.equals("QA")) {
 			base_url = "http://svm-ms-qa-us.centralus.cloudapp.azure.com";
@@ -104,7 +104,7 @@ public class ConfigManager {
 
 			String messageBody = "<html>\r\n" + "  <body style='font-family: Arial, sans-serif;'>\r\n"
 					+ "    <div style='margin: 20px;'>\r\n" + "      <p style='margin-bottom: 20px;'>Hi,</p>\r\n"
-					+ "      <p>Below is the test result summary</p> <!-- Added line -->\r\n"
+					+ "      <p>Below is the test result summary for " + Env + "</p> <!-- Added line -->\r\n"
 					+ "      <table border='1' cellpadding='10' style='border-collapse: collapse; width: 50%;'>\r\n"
 					+ "        <tr style='background-color: #f2f2f2;'>\r\n"
 					+ "          <th style='padding: 10px; width: 30px;'><strong>Result</strong></th>\r\n"

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-OpenLoopSuite1" class="navigator-link">
-              <span class="suite-name border-failed">OpenLoopSuite1</span>
+              <span class="suite-name border-passed">OpenLoopSuite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-OpenLoopSuite1" class="hide-methods failed suite-OpenLoopSuite1"> (hide)</a> <!-- hide-methods failed suite-OpenLoopSuite1 -->
-                      <a href="#" panel-name="suite-OpenLoopSuite1" class="show-methods failed suite-OpenLoopSuite1"> (show)</a> <!-- show-methods failed suite-OpenLoopSuite1 -->
-                    </span>
-                    <div class="method-list-content failed suite-OpenLoopSuite1">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-OpenLoopSuite1" title="api.test.PlacePersonalizedOrderTest" class="method navigator-link" hash-for-method="placeNonPersonalizedOrder1">placeNonPersonalizedOrder1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-OpenLoopSuite1 -->
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -143,6 +129,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-OpenLoopSuite1" title="api.test.PlacePersonalizedOrderTest" class="method navigator-link" hash-for-method="placeNonPersonalizedOrder1">placeNonPersonalizedOrder1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-OpenLoopSuite1" title="api.test.PlacePersonalizedOrderTest" class="method navigator-link" hash-for-method="readpayload">readpayload</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -158,46 +149,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-OpenLoopSuite1" class="panel OpenLoopSuite1">
-          <div class="suite-OpenLoopSuite1-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">api.test.PlacePersonalizedOrderTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="placeNonPersonalizedOrder1">
-                  </a> <!-- placeNonPersonalizedOrder1 -->
-                  <span class="method-name">placeNonPersonalizedOrder1</span>
-                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;201&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at api.test.PlacePersonalizedOrderTest.placeNonPersonalizedOrder1(PlacePersonalizedOrderTest.java:44)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 37 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(PlacePersonalized order1)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-OpenLoopSuite1-class-failed -->
           <div class="suite-OpenLoopSuite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -255,6 +206,15 @@ Expected status code &lt;201&gt; but was &lt;200&gt;.
                   <span class="method-name">placeNonPersonalizedOrder</span>
                   <em>
 (PlacePersonalized order)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="placeNonPersonalizedOrder1">
+                  </a> <!-- placeNonPersonalizedOrder1 -->
+                  <span class="method-name">placeNonPersonalizedOrder1</span>
+                  <em>
+(PlacePersonalized order1)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -328,36 +288,36 @@ data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'placeNonPersonalizedOrder')
 data.setCell(0, 2, 'api.test.PlacePersonalizedOrderTest')
-data.setCell(0, 3, 14791);
+data.setCell(0, 3, 10094);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'placeNonPersonalizedOrder1')
 data.setCell(1, 2, 'api.test.PlacePersonalizedOrderTest')
-data.setCell(1, 3, 7620);
+data.setCell(1, 3, 8622);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'getToken')
 data.setCell(2, 2, 'api.test.LoginTest')
-data.setCell(2, 3, 3982);
+data.setCell(2, 3, 4640);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'getTokenWithoutPassword')
+data.setCell(3, 1, 'getTokenWithoutclientId')
 data.setCell(3, 2, 'api.test.LoginTest')
-data.setCell(3, 3, 1251);
+data.setCell(3, 3, 1711);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'getTokenWithoutclientId')
+data.setCell(4, 1, 'getTokenWithoutPassword')
 data.setCell(4, 2, 'api.test.LoginTest')
-data.setCell(4, 3, 1134);
+data.setCell(4, 3, 1603);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'getTokenWithoutUserName')
 data.setCell(5, 2, 'api.test.LoginTest')
-data.setCell(5, 3, 1069);
+data.setCell(5, 3, 1594);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'readpayload')
 data.setCell(6, 2, 'api.test.PlacePersonalizedOrderTest')
-data.setCell(6, 3, 5);
+data.setCell(6, 3, 2);
 window.suiteTableData['OpenLoopSuite1']= { tableData: data, tableDiv: 'times-div-OpenLoopSuite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 29 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-OpenLoopSuite1">
               </div> <!-- times-div-OpenLoopSuite1 -->
             </div> <!-- times-div -->
@@ -399,51 +359,49 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpData</span>
-                <span class="method-start">302 ms</span>
+                <span class="method-start">244 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">getToken</span>
-                <span class="method-start">816 ms</span>
+                <span class="method-start">708 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTokenWithoutPassword</span>
-                <span class="method-start">4805 ms</span>
+                <span class="method-start">5352 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTokenWithoutUserName</span>
-                <span class="method-start">6058 ms</span>
+                <span class="method-start">6956 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTokenWithoutclientId</span>
-                <span class="method-start">7128 ms</span>
+                <span class="method-start">8551 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">api.test.PlacePersonalizedOrderTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpData</span>
-                <span class="method-start">8265 ms</span>
+                <span class="method-start">10264 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">placeNonPersonalizedOrder</span>
-                <span class="method-start">10213 ms</span>
+                <span class="method-start">12700 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">placeNonPersonalizedOrder1</span>
-                <span class="method-start">25005 ms</span>
+                <span class="method-start">22795 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">readpayload</span>
-                <span class="method-start">32642 ms</span>
+                <span class="method-start">31418 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">api.test.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">SendEmail</span>
-                <span class="method-start">33037 ms</span>
+                <span class="method-start">31823 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

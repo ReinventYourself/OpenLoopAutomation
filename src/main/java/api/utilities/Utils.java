@@ -66,6 +66,7 @@ public class Utils {
 		setLogFile();
 		Response response = given().filters(new RequestLoggingFilter(log), new ResponseLoggingFilter(log))
 				.contentType("Application/json").body(payload.toString()).when().post(url);
+		printResponseLogInReport(response);
 		return response;
 
 	}
@@ -113,17 +114,23 @@ public class Utils {
 	}
 
 	private static void setLogFile() {
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");
-			String timestamp = dateFormat.format(new Date());
-			String logFileName = System.getProperty("user.dir") + "//logs//testlog_" + ExtentReportManager.methodName
-					+ timestamp + ".text";
-			log = new PrintStream(new FileOutputStream(logFileName, true));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		   try {
+		        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+				String currentDate = dateFormat.format(new Date());
+		        SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyyMMdd_HHmmss");
+				String currentDatewithseconds = dateFormat1.format(new Date());
 
+
+		        File logsFolder = new File(System.getProperty("user.dir") + "//logs//" + currentDate);
+		        if (!logsFolder.exists()) {
+		            logsFolder.mkdirs(); 
+		        }
+
+		        String logFileName = logsFolder.getAbsolutePath() + "//testlog_" + ExtentReportManager.methodName + currentDatewithseconds +".txt";
+		        log = new PrintStream(new FileOutputStream(logFileName, true));
+		    } catch (FileNotFoundException e) {
+		        e.printStackTrace();
+		    }
 	}
 
 	public static String modifyJson(String OriginaljsonString, String jsonPath, Object newValue) {
@@ -143,7 +150,7 @@ public class Utils {
 
 		try {
 
-			System.out.println(ConfigManager.Env);
+			//System.out.println(ConfigManager.Env);
 			if (ConfigManager.Env.equals("QA")) {
 				F = new File(
 						System.getProperty("user.dir") + "/src/main/resources/RequestPayloadTestData/QA/" + FileName);

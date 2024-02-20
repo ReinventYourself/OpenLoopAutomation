@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.518 s <<< FAILURE! - in TestSuite
-createUser(api.test.UserTests)  Time elapsed: 5.421 s  <<< FAILURE!
-java.lang.AssertionError: expected [201] but found [200]
-	at api.test.UserTests.createUser(UserTests.java:53)
-
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.283 s - in TestSuite
