@@ -17,7 +17,7 @@ environment {
         stage('Build') {
             steps {
                 // Build your Maven project
-                sh "mvn clean install"
+                bat 'mvn clean install'
             }
         }
 
@@ -25,7 +25,7 @@ environment {
             steps {
                 // Run your tests
                 //env.MAVEN_OPTS = '-DforkCount=0'
-                sh "mvn test -Dsurefire.suiteXmlFiles=testng.xml"
+                bat mvn test -Dsurefire.suiteXmlFiles=testng.xml'
             }
         }
 
