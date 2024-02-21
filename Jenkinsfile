@@ -25,7 +25,7 @@ environment {
             steps {
                 // Run your tests
                 //env.MAVEN_OPTS = '-DforkCount=0'
-                bat mvn test -Dsurefire.suiteXmlFiles=testng.xml'
+                bat 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
             }
         }
 
