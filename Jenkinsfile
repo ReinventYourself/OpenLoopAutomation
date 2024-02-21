@@ -19,7 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Run your tests
-                env.MAVEN_OPTS = '-DforkCount=0'
+                //env.MAVEN_OPTS = '-DforkCount=0'
                 sh 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
             }
         }
