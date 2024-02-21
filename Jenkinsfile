@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        // Define environment variables if needed
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -27,17 +23,6 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                // Deploy your application (if applicable)
-                // You may need to configure this based on your deployment strategy
-            }
-        }
     }
 
-    post {
-        always {
-            // Cleanup or additional tasks that need to run regardless of success or failure
-        }
-    }
 }
