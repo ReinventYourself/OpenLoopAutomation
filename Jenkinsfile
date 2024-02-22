@@ -18,7 +18,8 @@ pipeline {
                     
                     // def prop = readProperties file: 'src/main/resources/config.properties'
 
-                    def propertiesFile = 'src/main/resources/config.properties'
+                    def propertiesFile = ${workspace}+'/src/main/resources/config.properties'
+                    echo propertiesFile
                     def properties = new Properties()
                     properties.load(new FileInputStream(propertiesFile))
 
