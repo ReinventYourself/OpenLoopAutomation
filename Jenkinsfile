@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     parameters {
-        string(name: 'Env', defaultValue: 'QA', description: 'Environment to execute')
+        string(name: 'Env', description: 'Environment to execute')
     }
     
     stages {
@@ -18,9 +18,9 @@ pipeline {
              script {
                     
                     workspaceDir = "${WORKSPACE}"
-                   echo "this is work ${workspaceDir}"
+                    echo "this is work ${workspaceDir}"
                     def propertiesFile = "${workspaceDir}/src/main/resources/config.properties"
-                    echo propertiesFile
+                  //  echo propertiesFile
                     def properties = new Properties()
                     properties.load(new FileInputStream(propertiesFile))
                     properties.put('Env', params.Env)
