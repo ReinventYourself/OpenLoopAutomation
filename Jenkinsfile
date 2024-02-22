@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    
+    
    
     stages {
     
@@ -39,7 +41,6 @@ pipeline {
                     properties.store(new FileWriter(propertiesFile), null) 
                     
                 }
-                // Build your Maven project
                 bat 'mvn clean install -Dsurefire.suiteXmlFiles=testng.xml'
             }
         }
