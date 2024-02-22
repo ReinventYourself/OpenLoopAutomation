@@ -1,6 +1,11 @@
 pipeline {
     agent any
     
+   parameters {
+    string(name: 'Env', defaultValue: 'QA,Staging', description: 'Environment to execute', allowMultiple: true)
+}
+    
+    
     stages {
         stage('Checkout') {
             steps {
