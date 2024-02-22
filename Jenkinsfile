@@ -12,41 +12,27 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build and Test') {
             steps {
             
              script {
                     
                     workspaceDir = "${WORKSPACE}"
                    echo "this is work ${workspaceDir}"
-                    // def prop = readProperties file: 'src/main/resources/config.properties'
-
                     def propertiesFile = "${workspaceDir}/src/main/resources/config.properties"
                     echo propertiesFile
                     def properties = new Properties()
                     properties.load(new FileInputStream(propertiesFile))
-
-                    // Update the environment property
-                         properties.put('Env', params.Env)
-
-                    // Write the updated properties back to the file
-                    //writeProperties file: 'src/main/resources/config.properties', properties: properties
+                    properties.put('Env', params.Env)
                     properties.store(new FileWriter(propertiesFile), null) 
-                    
                     
                 }
                 // Build your Maven project
-                bat 'mvn clean install'
+                bat 'mvn clean install -Dsurefire.suiteXmlFiles=testng.xml''
             }
         }
 
-        stage('Test') {
-            steps {
-                // Run your tests
-                //env.MAVEN_OPTS = '-DforkCount=0'
-                bat 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
-            }
-        }
+
 
     }
 
