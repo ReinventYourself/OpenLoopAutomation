@@ -2,7 +2,7 @@ pipeline {
     agent any
     
    parameters {
-    string(name: 'Env', defaultValue: 'QA,Staging', description: 'Environment to execute', allowMultiple: true)
+    string(name: 'Env', defaultValue: 'QA','Staging', description: 'Environment to execute')
 }
     
     
