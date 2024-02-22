@@ -1,10 +1,6 @@
 pipeline {
     agent any
     
-    parameters {
-        string(name: 'Env', description: 'Environment to execute')
-    }
-    
     stages {
         stage('Checkout') {
             steps {
