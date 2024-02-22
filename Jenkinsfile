@@ -28,7 +28,7 @@ pipeline {
                     
                 }
                 // Build your Maven project
-                bat 'mvn clean install -Dsurefire.suiteXmlFiles=testng.xml''
+                bat 'mvn clean install -Dsurefire.suiteXmlFiles=testng.xml'
             }
         }
 
