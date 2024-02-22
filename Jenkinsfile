@@ -19,7 +19,7 @@ pipeline {
                      def properties = readProperties file: 'src/main/resources/config.properties'
 
                     // Update the environment property
-                    properties.setProperty('Env', params.Env)
+                    properties.put('Env', params.Env)
 
                     // Write the updated properties back to the file
                     writeProperties file: 'src/main/resources/config.properties', properties: properties
