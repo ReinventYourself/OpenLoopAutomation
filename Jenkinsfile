@@ -27,7 +27,7 @@ pipeline {
 
                     // Write the updated properties back to the file
                     //writeProperties file: 'src/main/resources/config.properties', properties: properties
-                    properties.store(new FileWriter(propertiesFile), null) 
+                    properties.store(new FileWriter(properties), null) 
                     
                     
                 }
