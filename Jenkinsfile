@@ -16,11 +16,11 @@ pipeline {
             steps {
              script {
                     
-                     //def properties = readProperties file: 'src/main/resources/config.properties'
+                     def properties = readProperties file: 'src/main/resources/config.properties'
 
-                    def propertiesFile = 'src/main/resources/config.properties'
-                    def properties = new Properties()
-                    properties.load(new FileInputStream(propertiesFile))
+                    //def propertiesFile = 'src/main/resources/config.properties'
+                    //def properties = new Properties()
+                    //properties.load(new FileInputStream(propertiesFile))
 
                     // Update the environment property
                     properties.put('Env', params.Env)
