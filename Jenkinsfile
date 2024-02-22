@@ -1,12 +1,23 @@
 pipeline {
     agent any
-    
-   parameters {
-    string(name: 'Env', defaultValue: 'QA','Staging', description: 'Environment to execute')
-}
-    
-    
+   
     stages {
+    
+    stage('Setup parameters') {
+            steps {
+                script { 
+                    properties([
+                        parameters([
+                            choice(
+                                choices: ['QA', 'Staging'], 
+                                name: 'Env'
+                            )]
+                            )
+                            ]
+                            )
+                            }
+    }
+    }
         stage('Checkout') {
             steps {
                    checkout scm
