@@ -1,0 +1,45 @@
+Request method:	POST
+Request URI:	https://uatapi.svmcards.com/api/tokens/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=Application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "cWF6d3N4ZWQxMjMh",
+    "clientId": "ClientApi",
+    "clientName": "Guitarcenter",
+    "userName": "amitapi"
+}
+HTTP/1.1 200 OK
+Date: Mon, 26 Feb 2024 18:06:00 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: no-store,no-cache
+pragma: no-cache
+x-xss-protection: 1;mode=block
+x-frame-options: DENY
+referrer-policy: no-referrer
+x-content-type-options: nosniff
+content-security-policy: default-src 'self'; img-src 'self'font-src 'self'; style-src 'self'; script-src 'self' frame-src 'self';connect-src 'self';
+x-correlation-id: 80001208-0002-f000-b63f-84710c7967bb
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bdoSRHJ2i8E1AaFzxVBnezOHY%2F0hN4jr%2Bjf5CKdAG2f6nGu9Kt7ZzSpperfpURgo9D6GMMn5POr7Ni7N2ceT%2BbUnGCI2i%2F8XYyadBDl99vYDI%2FLfbT%2B2TrQJ91t1Cd9EDXiDiuc%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 85ba1e83793c2e52-BOM
+Content-Encoding: gzip
+
+{
+    "accessToken": "831E5C3AAC9CC00BB656125784BC8D49EBB9EC31295B9B2053FD4C3E9CC66912",
+    "refreshToken": "049AF44A356F14B5139A03CD36BDEB58DD9BEDC3B4603B6FBB8807F5E5C31DB2",
+    "lastLogin": "2024-02-26T18:02:50.17Z",
+    "userName": "amitapi",
+    "expiresIn": 1800
+}

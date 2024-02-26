@@ -31,7 +31,7 @@ public class ExtentReportManager implements ITestListener {
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		repName = "Test-Report-" + timeStamp + ".html";
 
-		sparkreporter = new ExtentSparkReporter(".\\reports\\" + repName);
+		sparkreporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\reports\\" + repName);
 		sparkreporter.config().setDocumentTitle("OpenLoopAutomaton");
 		sparkreporter.config().setReportName("OpenLoop API Report " + ConfigManager.Env);
 		sparkreporter.config().setTheme(Theme.DARK);
