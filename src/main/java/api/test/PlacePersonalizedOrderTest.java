@@ -20,7 +20,7 @@ public class PlacePersonalizedOrderTest extends Base {
 		log = LogManager.getLogger(this.getClass());
 		Payload = Utils.getPayloadFromJsonFile("PlaceNonPersonalizedOrder.json");
 		Utils.getToken();
-		Utils.requestBuilder();
+		//Utils.requestBuilder();
 	}
 
 	@Test(description = "PlacePersonalized order")

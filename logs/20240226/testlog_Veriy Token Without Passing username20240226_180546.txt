@@ -1,0 +1,38 @@
+Request method:	POST
+Request URI:	https://uatapi.svmcards.com/api/tokens/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=Application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "cWF6d3N4ZWQxMjMh",
+    "clientId": "ClientApi",
+    "clientName": "Guitarcenter",
+    "userName": ""
+}
+HTTP/1.1 422 Unprocessable Entity
+Date: Mon, 26 Feb 2024 12:35:48 GMT
+Content-Type: text/plain; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: no-store,no-cache
+pragma: no-cache
+x-xss-protection: 1;mode=block
+x-frame-options: DENY
+referrer-policy: no-referrer
+x-content-type-options: nosniff
+content-security-policy: default-src 'self'; img-src 'self'font-src 'self'; style-src 'self'; script-src 'self' frame-src 'self';connect-src 'self';
+x-correlation-id: 80000289-0002-e200-b63f-84710c7967bb
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FZ5Dvl3GB5xCcSVu0fmz7uygJKMtBM1f%2FK2DFJgg4h4a86K8kpK8r3gjNAYumm0xJgUSsnLcT1nK2MpQ9rhYjV55Ts0rNfAlBF0s5DCwYiddVWyvjdEhOuCPv6S%2B9aJAi7H%2F2ng%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 85b83adc2b7da3ca-SIN
+
+["A valid value for User Name is required for authentication."]

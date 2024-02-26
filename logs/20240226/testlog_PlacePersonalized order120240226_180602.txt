@@ -1,0 +1,486 @@
+Request method:	POST
+Request URI:	https://uatapi.svmcards.com/client/orderservice/PlaceNonPersonalizedOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer D2D6E3DBF2DEA0A1F8AB924BE6B5E1B54385193078A0261A221BD6B908B854DE
+				Accept=*/*
+				Content-Type=Application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "externalReference": "",
+    "bulkShipVendor": "",
+    "programName": "Guitar_in",
+    "bulkShipMethodType": "1st Class",
+    "bulkShipmentAddress": {
+        "zip": "65017",
+        "country": "US",
+        "city": "Woodridge",
+        "streetLines": [
+            "8880 main st1",
+            ""
+        ],
+        "postalCode": "",
+        "companyName": "RSI",
+        "state": "IL",
+        "region": ""
+    },
+    "orderItems": [
+        {
+            "cardData": {
+                "name4": "",
+                "name3": "",
+                "pin": "",
+                "mailerText": "Mail",
+                "activationAnswer": "test",
+                "activationLabel": "Activation Label"
+            },
+            "externalReference": "",
+            "quantity": "5",
+            "initialLoadAmount": "1000",
+            "productIdName": ""
+        }
+    ]
+}
+HTTP/1.1 200 OK
+Date: Mon, 26 Feb 2024 12:36:13 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: no-store,no-cache
+pragma: no-cache
+x-xss-protection: 1;mode=block
+x-frame-options: DENY
+referrer-policy: no-referrer
+x-content-type-options: nosniff
+content-security-policy: default-src 'self'; img-src 'self'font-src 'self'; style-src 'self'; script-src 'self' frame-src 'self';connect-src 'self';
+x-correlation-id: 80001179-0000-ee00-b63f-84710c7967bb
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aTsKPbotbH7hIi54TJZKX8AoldqdE4bYFBwiWsdZ9bnz2PGGPVoZTRHV0OFbPYmtNuI4%2FDODpXLDCkUUW8bv4qoMi6q8Gz%2FCkHC7aJwJOJsAotTAWgsbUAxjqyTJzrrwj9nFIjw%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 85b83b403b195601-SIN
+Content-Encoding: gzip
+
+{
+    "nonPersonalizedOrderResult": {
+        "orderResultItems": [
+            {
+                "groups": [
+                    {
+                        "groupId": "89b6cb9d-d8ad-43fb-8bf6-b3513deebc25",
+                        "version": 0,
+                        "versionSpecified": false,
+                        "accounts": [
+                            {
+                                "availableBalance": 1000.0,
+                                "createdAt": "2024-02-26T12:36:12.4418879Z",
+                                "endValidDuration": "0001-01-01T00:00:00Z",
+                                "accountId": "1991984300",
+                                "ledgerBalance": 0.0,
+                                "openingBalance": 0.0,
+                                "openingBalanceDateTime": "0001-01-01T00:00:00Z",
+                                "startValidDuration": "0001-01-01T00:00:00Z",
+                                "version": 0.0,
+                                "updated": "0001-01-01T00:00:00Z",
+                                "activeHoldAmount": 0.0
+                            }
+                        ],
+                        "cards": [
+                            {
+                                "activationDateTimeSpecified": false,
+                                "expirationDate": "2032-11-30T00:00:00Z",
+                                "issuedDateTime": "0001-01-01T00:00:00Z",
+                                "updatedDateTimeSpecified": false,
+                                "createdDateTime": "2024-02-26T12:36:12.4418879Z",
+                                "bin": "0",
+                                "cardNumber": "xxxxxxxxxxxx9203",
+                                "cardId": "100001746930",
+                                "sequenceNumberSpecified": false,
+                                "serviceCodeSpecified": false,
+                                "versionSpecified": false,
+                                "shipMethodTypeSpecified": false,
+                                "status": 1,
+                                "cardTypeSpecified": false,
+                                "statusReasonSpecified": false,
+                                "dateLastUsedSpecified": false,
+                                "dateLastChangedSpecified": false
+                            }
+                        ],
+                        "users": [
+                            {
+                                "created": "0001-01-01T00:00:00Z",
+                                "userId": "1991984300",
+                                "identityVerificationResultSpecified": false,
+                                "updatedSpecified": false,
+                                "versionSpecified": false,
+                                "userTypeSpecified": false,
+                                "person": {
+                                    "dateOfBirthSpecified": false,
+                                    "genderSpecified": false,
+                                    "lastName": "Customer",
+                                    "firstName": "Valued",
+                                    "address": {
+                                        "streetLines": [
+                                            "8880 main st1",
+                                            "",
+                                            "",
+                                            ""
+                                        ],
+                                        "city": "Woodridge",
+                                        "country": "US",
+                                        "state": "IL",
+                                        "region": "",
+                                        "postalCode": "65017"
+                                    },
+                                    "identifications": [
+                                        
+                                    ],
+                                    "phones": [
+                                        
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isError": false,
+                "isErrorSpecified": false
+            },
+            {
+                "groups": [
+                    {
+                        "groupId": "522456dc-5372-4f76-a9d7-145d16eab4a3",
+                        "version": 0,
+                        "versionSpecified": false,
+                        "accounts": [
+                            {
+                                "availableBalance": 1000.0,
+                                "createdAt": "2024-02-26T12:36:12.4427452Z",
+                                "endValidDuration": "0001-01-01T00:00:00Z",
+                                "accountId": "1991984301",
+                                "ledgerBalance": 0.0,
+                                "openingBalance": 0.0,
+                                "openingBalanceDateTime": "0001-01-01T00:00:00Z",
+                                "startValidDuration": "0001-01-01T00:00:00Z",
+                                "version": 0.0,
+                                "updated": "0001-01-01T00:00:00Z",
+                                "activeHoldAmount": 0.0
+                            }
+                        ],
+                        "cards": [
+                            {
+                                "activationDateTimeSpecified": false,
+                                "expirationDate": "2032-11-30T00:00:00Z",
+                                "issuedDateTime": "0001-01-01T00:00:00Z",
+                                "updatedDateTimeSpecified": false,
+                                "createdDateTime": "2024-02-26T12:36:12.4427452Z",
+                                "bin": "0",
+                                "cardNumber": "xxxxxxxxxxxx1366",
+                                "cardId": "100001746934",
+                                "sequenceNumberSpecified": false,
+                                "serviceCodeSpecified": false,
+                                "versionSpecified": false,
+                                "shipMethodTypeSpecified": false,
+                                "status": 1,
+                                "cardTypeSpecified": false,
+                                "statusReasonSpecified": false,
+                                "dateLastUsedSpecified": false,
+                                "dateLastChangedSpecified": false
+                            }
+                        ],
+                        "users": [
+                            {
+                                "created": "0001-01-01T00:00:00Z",
+                                "userId": "1991984301",
+                                "identityVerificationResultSpecified": false,
+                                "updatedSpecified": false,
+                                "versionSpecified": false,
+                                "userTypeSpecified": false,
+                                "person": {
+                                    "dateOfBirthSpecified": false,
+                                    "genderSpecified": false,
+                                    "lastName": "Customer",
+                                    "firstName": "Valued",
+                                    "address": {
+                                        "streetLines": [
+                                            "8880 main st1",
+                                            "",
+                                            "",
+                                            ""
+                                        ],
+                                        "city": "Woodridge",
+                                        "country": "US",
+                                        "state": "IL",
+                                        "region": "",
+                                        "postalCode": "65017"
+                                    },
+                                    "identifications": [
+                                        
+                                    ],
+                                    "phones": [
+                                        
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isError": false,
+                "isErrorSpecified": false
+            },
+            {
+                "groups": [
+                    {
+                        "groupId": "4a43ad65-9f62-497e-ad73-d13282685135",
+                        "version": 0,
+                        "versionSpecified": false,
+                        "accounts": [
+                            {
+                                "availableBalance": 1000.0,
+                                "createdAt": "2024-02-26T12:36:12.4514013Z",
+                                "endValidDuration": "0001-01-01T00:00:00Z",
+                                "accountId": "1991984302",
+                                "ledgerBalance": 0.0,
+                                "openingBalance": 0.0,
+                                "openingBalanceDateTime": "0001-01-01T00:00:00Z",
+                                "startValidDuration": "0001-01-01T00:00:00Z",
+                                "version": 0.0,
+                                "updated": "0001-01-01T00:00:00Z",
+                                "activeHoldAmount": 0.0
+                            }
+                        ],
+                        "cards": [
+                            {
+                                "activationDateTimeSpecified": false,
+                                "expirationDate": "2032-11-30T00:00:00Z",
+                                "issuedDateTime": "0001-01-01T00:00:00Z",
+                                "updatedDateTimeSpecified": false,
+                                "createdDateTime": "2024-02-26T12:36:12.4514013Z",
+                                "bin": "0",
+                                "cardNumber": "xxxxxxxxxxxx8072",
+                                "cardId": "100001746933",
+                                "sequenceNumberSpecified": false,
+                                "serviceCodeSpecified": false,
+                                "versionSpecified": false,
+                                "shipMethodTypeSpecified": false,
+                                "status": 1,
+                                "cardTypeSpecified": false,
+                                "statusReasonSpecified": false,
+                                "dateLastUsedSpecified": false,
+                                "dateLastChangedSpecified": false
+                            }
+                        ],
+                        "users": [
+                            {
+                                "created": "0001-01-01T00:00:00Z",
+                                "userId": "1991984302",
+                                "identityVerificationResultSpecified": false,
+                                "updatedSpecified": false,
+                                "versionSpecified": false,
+                                "userTypeSpecified": false,
+                                "person": {
+                                    "dateOfBirthSpecified": false,
+                                    "genderSpecified": false,
+                                    "lastName": "Customer",
+                                    "firstName": "Valued",
+                                    "address": {
+                                        "streetLines": [
+                                            "8880 main st1",
+                                            "",
+                                            "",
+                                            ""
+                                        ],
+                                        "city": "Woodridge",
+                                        "country": "US",
+                                        "state": "IL",
+                                        "region": "",
+                                        "postalCode": "65017"
+                                    },
+                                    "identifications": [
+                                        
+                                    ],
+                                    "phones": [
+                                        
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isError": false,
+                "isErrorSpecified": false
+            },
+            {
+                "groups": [
+                    {
+                        "groupId": "0e0e3ac8-e5bb-4184-ac87-e77c7f4b4486",
+                        "version": 0,
+                        "versionSpecified": false,
+                        "accounts": [
+                            {
+                                "availableBalance": 1000.0,
+                                "createdAt": "2024-02-26T12:36:12.451193Z",
+                                "endValidDuration": "0001-01-01T00:00:00Z",
+                                "accountId": "1991984303",
+                                "ledgerBalance": 0.0,
+                                "openingBalance": 0.0,
+                                "openingBalanceDateTime": "0001-01-01T00:00:00Z",
+                                "startValidDuration": "0001-01-01T00:00:00Z",
+                                "version": 0.0,
+                                "updated": "0001-01-01T00:00:00Z",
+                                "activeHoldAmount": 0.0
+                            }
+                        ],
+                        "cards": [
+                            {
+                                "activationDateTimeSpecified": false,
+                                "expirationDate": "2032-11-30T00:00:00Z",
+                                "issuedDateTime": "0001-01-01T00:00:00Z",
+                                "updatedDateTimeSpecified": false,
+                                "createdDateTime": "2024-02-26T12:36:12.451193Z",
+                                "bin": "0",
+                                "cardNumber": "xxxxxxxxxxxx9745",
+                                "cardId": "100001746931",
+                                "sequenceNumberSpecified": false,
+                                "serviceCodeSpecified": false,
+                                "versionSpecified": false,
+                                "shipMethodTypeSpecified": false,
+                                "status": 1,
+                                "cardTypeSpecified": false,
+                                "statusReasonSpecified": false,
+                                "dateLastUsedSpecified": false,
+                                "dateLastChangedSpecified": false
+                            }
+                        ],
+                        "users": [
+                            {
+                                "created": "0001-01-01T00:00:00Z",
+                                "userId": "1991984303",
+                                "identityVerificationResultSpecified": false,
+                                "updatedSpecified": false,
+                                "versionSpecified": false,
+                                "userTypeSpecified": false,
+                                "person": {
+                                    "dateOfBirthSpecified": false,
+                                    "genderSpecified": false,
+                                    "lastName": "Customer",
+                                    "firstName": "Valued",
+                                    "address": {
+                                        "streetLines": [
+                                            "8880 main st1",
+                                            "",
+                                            "",
+                                            ""
+                                        ],
+                                        "city": "Woodridge",
+                                        "country": "US",
+                                        "state": "IL",
+                                        "region": "",
+                                        "postalCode": "65017"
+                                    },
+                                    "identifications": [
+                                        
+                                    ],
+                                    "phones": [
+                                        
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isError": false,
+                "isErrorSpecified": false
+            },
+            {
+                "groups": [
+                    {
+                        "groupId": "9c10ff6d-2c04-4816-9660-c1da09fcda91",
+                        "version": 0,
+                        "versionSpecified": false,
+                        "accounts": [
+                            {
+                                "availableBalance": 1000.0,
+                                "createdAt": "2024-02-26T12:36:12.4513032Z",
+                                "endValidDuration": "0001-01-01T00:00:00Z",
+                                "accountId": "1991984304",
+                                "ledgerBalance": 0.0,
+                                "openingBalance": 0.0,
+                                "openingBalanceDateTime": "0001-01-01T00:00:00Z",
+                                "startValidDuration": "0001-01-01T00:00:00Z",
+                                "version": 0.0,
+                                "updated": "0001-01-01T00:00:00Z",
+                                "activeHoldAmount": 0.0
+                            }
+                        ],
+                        "cards": [
+                            {
+                                "activationDateTimeSpecified": false,
+                                "expirationDate": "2032-11-30T00:00:00Z",
+                                "issuedDateTime": "0001-01-01T00:00:00Z",
+                                "updatedDateTimeSpecified": false,
+                                "createdDateTime": "2024-02-26T12:36:12.4513032Z",
+                                "bin": "0",
+                                "cardNumber": "xxxxxxxxxxxx1023",
+                                "cardId": "100001746932",
+                                "sequenceNumberSpecified": false,
+                                "serviceCodeSpecified": false,
+                                "versionSpecified": false,
+                                "shipMethodTypeSpecified": false,
+                                "status": 1,
+                                "cardTypeSpecified": false,
+                                "statusReasonSpecified": false,
+                                "dateLastUsedSpecified": false,
+                                "dateLastChangedSpecified": false
+                            }
+                        ],
+                        "users": [
+                            {
+                                "created": "0001-01-01T00:00:00Z",
+                                "userId": "1991984304",
+                                "identityVerificationResultSpecified": false,
+                                "updatedSpecified": false,
+                                "versionSpecified": false,
+                                "userTypeSpecified": false,
+                                "person": {
+                                    "dateOfBirthSpecified": false,
+                                    "genderSpecified": false,
+                                    "lastName": "Customer",
+                                    "firstName": "Valued",
+                                    "address": {
+                                        "streetLines": [
+                                            "8880 main st1",
+                                            "",
+                                            "",
+                                            ""
+                                        ],
+                                        "city": "Woodridge",
+                                        "country": "US",
+                                        "state": "IL",
+                                        "region": "",
+                                        "postalCode": "65017"
+                                    },
+                                    "identifications": [
+                                        
+                                    ],
+                                    "phones": [
+                                        
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isError": false,
+                "isErrorSpecified": false
+            }
+        ],
+        "orderId": "4000420438",
+        "status": 5
+    }
+}

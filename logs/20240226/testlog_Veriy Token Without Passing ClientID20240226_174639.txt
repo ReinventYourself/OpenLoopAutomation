@@ -1,0 +1,41 @@
+Request method:	POST
+Request URI:	https://uatapi.svmcards.com/api/tokens/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=Application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "cWF6d3N4ZWQxMjMh",
+    "clientId": "",
+    "clientName": "Guitarcenter",
+    "userName": "amitapi"
+}
+HTTP/1.1 422 Unprocessable Entity
+Date: Mon, 26 Feb 2024 12:16:41 GMT
+Content-Type: text/plain; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: no-store,no-cache
+pragma: no-cache
+set-cookie: datadome=KmPZBL_5Ji5b8A6QbpWrev4mjt3_x_h8_lNhw3y_7v8zXpmYq98P_sPRz4emKzOHZZCmn3Drg1s9LRLfTXFFc_7FsBcl7GNK7yEg6odvB7vEofbTmwCmd~fQkd6JpGLs; Max-Age=31536000; Domain=.svmcards.com; Path=/; Secure; SameSite=Lax
+x-datadome: protected
+accept-ch: Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory
+x-xss-protection: 1;mode=block
+x-frame-options: DENY
+referrer-policy: no-referrer
+x-content-type-options: nosniff
+content-security-policy: default-src 'self'; img-src 'self'font-src 'self'; style-src 'self'; script-src 'self' frame-src 'self';connect-src 'self';
+x-correlation-id: 800005a4-0002-ec00-b63f-84710c7967bb
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=b5w8CjEaYuNo%2FMnI%2Fv0oUASu8I%2BNuJ8uagk6iMaVxb41rUoh4eZ0iCB0WmjUz%2FXKy5Td8MqzHLcCtQ9NXnUlUrnZE8iq%2FkJaRg4Ify%2Fqqc7PdAI8cchBg%2FZbPuA6nIixYdmFRm4%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 85b81edb1d110217-SIN
+
+["ClientId is required."]

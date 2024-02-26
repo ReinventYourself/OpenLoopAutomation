@@ -1,0 +1,41 @@
+Request method:	POST
+Request URI:	https://uatapi.svmcards.com/api/tokens/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=Application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "cWF6d3N4ZWQxMjMh",
+    "clientId": "ClientApi",
+    "clientName": "Guitarcenter",
+    "userName": ""
+}
+HTTP/1.1 422 Unprocessable Entity
+Date: Mon, 26 Feb 2024 12:16:39 GMT
+Content-Type: text/plain; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: no-store,no-cache
+pragma: no-cache
+set-cookie: datadome=xOmLbNGOvP0yb6n_Njtr81aSjhhaGpiUxP_5mbu42issSgrpUZtDKvQAUtrzr2yrtQ9jl9HhUBQo~2~AI~plxNe3_Np4LuomMlwH9DD_DQ4hZ04l2kyJ0497_ZkzmS2r; Max-Age=31536000; Domain=.svmcards.com; Path=/; Secure; SameSite=Lax
+x-datadome: protected
+accept-ch: Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory
+x-xss-protection: 1;mode=block
+x-frame-options: DENY
+referrer-policy: no-referrer
+x-content-type-options: nosniff
+content-security-policy: default-src 'self'; img-src 'self'font-src 'self'; style-src 'self'; script-src 'self' frame-src 'self';connect-src 'self';
+x-correlation-id: 8000024e-0001-f800-b63f-84710c7967bb
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wdhggjz72uyhO7heJNNrUCcoOwUwTELUkwPRFymoNlHfrcyIcMiQbOPfLaobsJ0ETjDZWLB2iVZKjjqydiHE%2Bcak8LP8YkbyQkIIqifr9%2BuwwMeUu2s7hq0pScpod%2FaAfWUj%2BQ4%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 85b81ed27aafab47-SIN
+
+["A valid value for User Name is required for authentication."]
