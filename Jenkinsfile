@@ -2,10 +2,10 @@ pipeline {
     agent any
     
        environment {
-        DOCKER_HUB_USERNAME = credentials('gauravs2089').username
-        DOCKER_HUB_PASSWORD = credentials('Qazwsxed123!').password
-        DOCKER_IMAGE_NAME = 'gauravs2089/restassuredtest'
-        BUILD_VERSION = env.BUILD_NUMBER
+        DOCKER_HUB_USERNAME = credentials("gauravs2089").username
+        DOCKER_HUB_PASSWORD = credentials("Qazwsxed123!").password
+        DOCKER_IMAGE_NAME = "gauravs2089/restassuredtest"
+        BUILD_VERSION = "${env.BUILD_NUMBER}"
     }
     
    
