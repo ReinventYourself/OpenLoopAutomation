@@ -1,6 +1,12 @@
 pipeline {
     agent any
     
+       environment {
+        DOCKER_HUB_USERNAME = credentials('gauravs2089').username
+        DOCKER_HUB_PASSWORD = credentials('Qazwsxed123!').password
+        DOCKER_IMAGE_NAME = 'gauravs2089/restassuredtest'
+        BUILD_VERSION = env.BUILD_NUMBER
+    }
     
    
     stages {
@@ -42,6 +48,24 @@ pipeline {
                     
                 }
                 bat 'mvn clean install -Dsurefire.suiteXmlFiles=testng.xml'
+            }
+        }
+        
+                stage('Build and Publish Docker Image') {
+            steps {
+            
+             script {
+                    
+      // Build the Docker image with the Jenkins build number as the tag
+                    bat "docker build -t ${DOCKER_IMAGE_NAME}:${BUILD_VERSION} ."
+
+                    // Log in to Docker Hub
+                    bat "docker login -u ${DOCKER_HUB_USERNAME} -p ${DOCKER_HUB_PASSWORD}"
+
+                    // Push the Docker image to Docker Hub with the Jenkins build number as the tag
+                    bat "docker push ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}"
+                    
+                }
             }
         }
 
