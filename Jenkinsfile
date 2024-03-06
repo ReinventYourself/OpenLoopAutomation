@@ -5,7 +5,7 @@ pipeline {
        
        DOCKER_REGISTRY_CREDENTIAL = credentials("DockerId")
        
-        echo "{DOCKER_REGISTRY_CREDENTIAL}"
+        echo "registy credentials ${DOCKER_REGISTRY_CREDENTIAL}"
         DOCKER_HUB_USERNAME = "gauravs2089"
         DOCKER_HUB_PASSWORD = "Qazwsxed123!"
         DOCKER_IMAGE_NAME = "gauravs2089/restassuredtest"
