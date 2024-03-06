@@ -2,8 +2,6 @@ pipeline {
     agent any
     
        environment {
-       
-       DOCKER_REGISTRY_CREDENTIAL = credentials("DockerId")
         DOCKER_HUB_USERNAME = "gauravs2089"
         DOCKER_HUB_PASSWORD = "Qazwsxed123!"
         DOCKER_IMAGE_NAME = "gauravs2089/restassuredtest"
@@ -41,17 +39,6 @@ pipeline {
                     
                     workspaceDir = "${WORKSPACE}"
                     echo "this is work ${workspaceDir}"
-                    
-                    def credentialsArray = DOCKER_REGISTRY_CREDENTIAL.split(':')
-                    def DOCKER_REGISTRY_USERNAME = credentialsArray[0].trim()
-                    def DOCKER_REGISTRY_PASSWORD = credentialsArray[1].trim()
-
-                    echo "Registry credentials - Username: ${DOCKER_REGISTRY_USERNAME}, Password: ********"
-
-                    
-                    
-                    
-                    
                     def propertiesFile = "${workspaceDir}/src/main/resources/config.properties"
                   //  echo propertiesFile
                     def properties = new Properties()
