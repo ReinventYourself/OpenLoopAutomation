@@ -91,7 +91,7 @@ public class ConfigManager {
 			Message message = new MimeMessage(session);
 
 			// Set the from address
-			message.setFrom(new InternetAddress("gaurav.sharma2089@gmail.com"));
+			message.setFrom(new InternetAddress("gauravs2089@gmail.com"));
 
 			// Set the recipient address
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("gaurav.sharma2089@gmail.com,Arpit.Tripathi@rsystems.com,gaurav.sharma1@rsystems.com" ));
