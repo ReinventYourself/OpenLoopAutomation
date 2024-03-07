@@ -15,10 +15,6 @@ public class Base {
 	    }
 	 
 	 
-	 
-	 
-	 
-	 
 		@AfterSuite
 		public void SendEmail()
 		{

@@ -3,7 +3,6 @@ api\utilities\Base.class
 api\utilities\CustomValidationFailureListener.class
 api\utilities\ExtentReportManager.class
 api\test\LoginTest.class
-api\payload\User.class
 api\endpoints\Routes.class
 api\test\PlacePersonalizedOrderTest.class
 api\utilities\ConfigManager.class

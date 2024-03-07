@@ -19,6 +19,11 @@ pipeline {
                             choice(
                                 choices: ['QA', 'Staging'], 
                                 name: 'Env'
+                            ),
+                             choice(
+                                choices: ['False', 'True'],
+                                description: 'Send Email',
+                                name: 'EmailSend'
                             )]
                             )
                             ]
@@ -44,6 +49,7 @@ pipeline {
                     def properties = new Properties()
                     properties.load(new FileInputStream(propertiesFile))
                     properties.put('Env', params.Env)
+                    properties.put('EmailSend', params.EmailSend)
                     properties.store(new FileWriter(propertiesFile), null) 
                     
                 }

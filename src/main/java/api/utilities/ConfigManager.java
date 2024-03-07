@@ -94,8 +94,7 @@ public class ConfigManager {
 			message.setFrom(new InternetAddress("gaurav.sharma2089@gmail.com"));
 
 			// Set the recipient address
-			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("gaurav.sharma2089@gmail.com"));
-			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("gaurav.sharma1@rsystems.com"));
+			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("gaurav.sharma2089@gmail.com,Arpit.Tripathi@rsystems.com" ));
 
 			// Add the subject link
 			message.setSubject("Test Execution Report-" + new Date());
