@@ -71,8 +71,8 @@ public class ConfigManager {
 		// set the port of SMTP server
 		props.put("mail.smtp.port", "465");
 
-		final String userName = "gauravs2089@gmail.com";
-		final String passWord = "kimy vsju teti bwtk";
+		final String userName = "ballabhsharma292@gmail.com";
+		final String passWord = "qaki cjzv avlg ufcu";
 
 		// This will handle the complete authentication
 		Session session = Session.getInstance(props,
@@ -91,7 +91,7 @@ public class ConfigManager {
 			Message message = new MimeMessage(session);
 
 			// Set the from address
-			message.setFrom(new InternetAddress("gauravs2089@gmail.com"));
+			message.setFrom(new InternetAddress("ballabhsharma292@gmail.com"));
 
 			// Set the recipient address
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("gaurav.sharma2089@gmail.com,Arpit.Tripathi@rsystems.com,gaurav.sharma1@rsystems.com" ));
