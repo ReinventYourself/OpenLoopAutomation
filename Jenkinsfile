@@ -18,11 +18,12 @@ pipeline {
                         parameters([
                             choice(
                                 choices: ['QA', 'Staging'], 
+                                description: 'Please choose the Environment where you want to execute the test',
                                 name: 'Env'
                             ),
                              choice(
                                 choices: ['False', 'True'],
-                                description: 'Send Email',
+                                description: 'Select True if you want to send report to the configured recipient',
                                 name: 'EmailSend'
                             )]
                             )
