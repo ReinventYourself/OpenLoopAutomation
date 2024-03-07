@@ -18,7 +18,7 @@ public class Base {
 		@AfterSuite
 		public void SendEmail()
 		{
-			if(ConfigManager.prop.getProperty("EmailSend").equals("true"))
+			if(ConfigManager.prop.getProperty("EmailSend").equals("True"))
 			{
 		      ConfigManager.SendMailSSLWithAttachment();
 					} 
