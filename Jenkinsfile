@@ -77,7 +77,7 @@ pipeline {
              
              def sanitizedEnvironment = params.Env.toLowerCase()
                     echo sanitizedEnvironment
-                    echo "Docker image tag: ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${sanitizedEnvironment}"
+                    echo "Docker image tag: ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}-${sanitizedEnvironment}"
       // Build the Docker image with the Jenkins build number as the tag
                     bat "docker build -t ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${sanitizedEnvironment} ."
 
@@ -85,7 +85,7 @@ pipeline {
                     bat "docker login -u ${DOCKER_HUB_USERNAME} -p ${DOCKER_HUB_PASSWORD}"
 
                     // Push the Docker image to Docker Hub with the Jenkins build number as the tag
-                    bat "docker push ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${sanitizedEnvironment}"
+                    bat "docker push ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}-${sanitizedEnvironment}"
                     
                 }
             }
