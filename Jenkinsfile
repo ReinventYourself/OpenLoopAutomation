@@ -75,7 +75,7 @@ pipeline {
              script {
             if (!JOB_Name.contains('Smoke')) {
              
-             def sanitizedEnvironment = params.Env.replaceAll("[^a-z0-9]", "-").toLowerCase()
+             def sanitizedEnvironment = params.Env.toLowerCase()
                     echo sanitizedEnvironment
       // Build the Docker image with the Jenkins build number as the tag
                     bat "docker build -t ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${sanitizedEnvironment} ."
