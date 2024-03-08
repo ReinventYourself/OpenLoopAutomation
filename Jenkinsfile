@@ -68,8 +68,11 @@ pipeline {
                 bat "mvn clean install -Dsurefire.suiteXmlFiles=${XmlFile}"
             }
         }
-        if(!JOB_Name.contains('Smoke')) {
-                stage('Build and Publish Docker Image') {
+        
+        script {
+            if (!JOB_Name.contains('Smoke')) {
+
+          stage('Build and Publish Docker Image') {
             steps {
             
              script {
@@ -86,8 +89,9 @@ pipeline {
                 }
             }
         }
-        }
-
+        
+}
+}
 
 
     }
