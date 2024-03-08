@@ -56,6 +56,7 @@ pipeline {
                     
                     def suiteXmlFiles = 'testng.xml'
                     echo suiteXmlFiles
+                    echo "job name ${JOB_Name}"
                   if (JOB_Name.contains('smoke')) {
                       suiteXmlFiles = 'testngSmoke.xml'
                       echo "update file ${suiteXmlFiles}"
