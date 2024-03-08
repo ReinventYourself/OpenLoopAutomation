@@ -75,16 +75,16 @@ pipeline {
              script {
             if (!JOB_Name.contains('Smoke')) {
              
-             
-                    
+             def sanitizedEnvironment = params.Env.replaceAll("[^a-z0-9]", "-").toLowerCase()
+                    echo sanitizedEnvironment
       // Build the Docker image with the Jenkins build number as the tag
-                    bat "docker build -t ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${params.Env} ."
+                    bat "docker build -t ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${sanitizedEnvironment} ."
 
                     // Log in to Docker Hub
                     bat "docker login -u ${DOCKER_HUB_USERNAME} -p ${DOCKER_HUB_PASSWORD}"
 
                     // Push the Docker image to Docker Hub with the Jenkins build number as the tag
-                    bat "docker push ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${params.Env}"
+                    bat "docker push ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${sanitizedEnvironment}"
                     
                 }
             }
