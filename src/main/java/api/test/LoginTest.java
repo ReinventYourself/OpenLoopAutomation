@@ -17,14 +17,14 @@ public class LoginTest extends Base {
 	Logger log;
 	String Payload;
 
-	@BeforeClass
+	@BeforeClass(groups ={"Smoke"})
 	public void setUpData() {
 		log = LogManager.getLogger(this.getClass());
 		Payload = Utils.getPayloadFromJsonFile("Token.json");
 
 	}
 
-	@Test(description = "Get Token")
+	@Test(description = "Get Token",groups ={"Smoke"})
 	public void getToken() {
 		Response res = Utils.performpostwithoutAuth(Routes.Token_post, Payload);
 		res.then().statusCode(200);

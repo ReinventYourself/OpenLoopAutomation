@@ -15,7 +15,7 @@ public class PlacePersonalizedOrderTest extends Base {
 	Logger log;
 	String Payload;
 	Response res;
-	@BeforeClass
+	@BeforeClass(groups ={"Smoke"})
 	public void setUpData() {
 		log = LogManager.getLogger(this.getClass());
 		Payload = Utils.getPayloadFromJsonFile("PlaceNonPersonalizedOrder.json");
@@ -23,7 +23,7 @@ public class PlacePersonalizedOrderTest extends Base {
 		//Utils.requestBuilder();
 	}
 
-	@Test(description = "PlacePersonalized order")
+	@Test(description = "PlacePersonalized order",groups ={"Smoke"})
 	public void placeNonPersonalizedOrder() {
 		res = Utils.performPost(Routes.PlaceNonPersonalizedOrder_post, Payload);
 		res.then().statusCode(200);
@@ -31,7 +31,7 @@ public class PlacePersonalizedOrderTest extends Base {
 
 	
 	
-	@Test(description = "PlacePersonalized order1")
+	@Test(description = "PlacePersonalized order with updated Payload")
 	public void placeNonPersonalizedOrder1()
 	{
 		String updatedPayload =  Payload;

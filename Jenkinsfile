@@ -6,6 +6,7 @@ pipeline {
         DOCKER_HUB_PASSWORD = "Qazwsxed123!"
         DOCKER_IMAGE_NAME = "gauravs2089/restassuredtest"
         BUILD_VERSION = "${env.BUILD_NUMBER}"
+        JOB_Name ="${env.JOB_NAME}"
     }
     
    
@@ -53,8 +54,15 @@ pipeline {
                     properties.put('EmailSend', params.EmailSend)
                     properties.store(new FileWriter(propertiesFile), null) 
                     
+                    def suiteXmlFiles = 'testng.xml'
+                  if ("${JOB_Name}".contains('smoke')) {
+                      suiteXmlFiles = 'testngSmoke.xml'
+            }      
+                    
                 }
-                bat 'mvn clean install -Dsurefire.suiteXmlFiles=testng.xml'
+                
+                
+                bat 'mvn clean install -Dsurefire.suiteXmlFiles=${suiteXmlFiles}'
             }
         }
         

@@ -8,14 +8,14 @@ import api.endpoints.Routes;
 public class Base {
 
 	
-	 @BeforeSuite
+	 @BeforeSuite(groups ={"Smoke"}) 
 	    public void setup()
 	    {
 	        ConfigManager.loadConfig();
 	    }
 	 
 	 
-		@AfterSuite
+		@AfterSuite(groups ={"Smoke"})
 		public void SendEmail()
 		{
 			if(ConfigManager.prop.getProperty("EmailSend").equals("True"))
