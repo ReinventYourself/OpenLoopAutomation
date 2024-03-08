@@ -54,18 +54,19 @@ pipeline {
                     properties.put('EmailSend', params.EmailSend)
                     properties.store(new FileWriter(propertiesFile), null) 
                     
-                    def suiteXmlFiles = 'testng.xml'
-                    echo suiteXmlFiles
+                    def XmlFile = 'testng.xml'
+                    echo XmlFile
                     echo "job name ${JOB_Name}"
                   if (JOB_Name.contains('Smoke')) {
-                      suiteXmlFiles = 'testngSmoke.xml'
+                      XmlFile = 'testngSmoke.xml'
                       echo "update file ${suiteXmlFiles}"
-                                  }      
+                                  } 
+                                  
+                       echo XmlFile 
                     
                 }
                 
-                
-                bat 'mvn clean install -Dsurefire.suiteXmlFiles=${suiteXmlFiles}'
+                bat 'mvn clean install -Dsurefire.suiteXmlFiles= XmlFile'
             }
         }
         
