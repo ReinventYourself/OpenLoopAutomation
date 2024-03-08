@@ -7,6 +7,7 @@ pipeline {
         DOCKER_IMAGE_NAME = "gauravs2089/restassuredtest"
         BUILD_VERSION = "${env.BUILD_NUMBER}"
         JOB_Name ="${env.JOB_NAME}"
+        def XmlFile='testng.xml'
     }
     
    
@@ -42,7 +43,6 @@ pipeline {
 
         stage('Build and Test') {
             steps {
-                    def XmlFile
              script {
                     
                     workspaceDir = "${WORKSPACE}"
@@ -54,8 +54,6 @@ pipeline {
                     properties.put('Env', params.Env)
                     properties.put('EmailSend', params.EmailSend)
                     properties.store(new FileWriter(propertiesFile), null) 
-                    
-                    XmlFile = 'testng.xml'
                     echo XmlFile
                     echo "job name ${JOB_Name}"
                   if (JOB_Name.contains('Smoke')) {
