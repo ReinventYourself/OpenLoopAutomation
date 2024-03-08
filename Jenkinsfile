@@ -55,7 +55,7 @@ pipeline {
                     properties.store(new FileWriter(propertiesFile), null) 
                     
                     def suiteXmlFiles = 'testng.xml'
-                  if ("${JOB_Name}".contains('smoke')) {
+                  if (JOB_Name.contains('smoke')) {
                       suiteXmlFiles = 'testngSmoke.xml'
             }      
                     
