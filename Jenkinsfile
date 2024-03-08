@@ -69,13 +69,13 @@ pipeline {
             }
         }
         
-        script {
-            if (!JOB_Name.contains('Smoke')) {
-
           stage('Build and Publish Docker Image') {
             steps {
             
              script {
+            if (!JOB_Name.contains('Smoke')) {
+             
+             
                     
       // Build the Docker image with the Jenkins build number as the tag
                     bat "docker build -t ${DOCKER_IMAGE_NAME}:${BUILD_VERSION} ."
@@ -89,11 +89,7 @@ pipeline {
                 }
             }
         }
-        
-}
-}
-
-
+        }
     }
 
 }
