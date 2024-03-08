@@ -66,7 +66,7 @@ pipeline {
                     
                 }
                 
-                bat 'mvn clean install -Dsurefire.suiteXmlFiles= XmlFile'
+                bat 'mvn clean install -Dsurefire.suiteXmlFiles= ${XmlFile}'
             }
         }
         
