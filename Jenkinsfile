@@ -39,9 +39,10 @@ pipeline {
             }
         }
 
+
         stage('Build and Test') {
             steps {
-            
+                    def XmlFile
              script {
                     
                     workspaceDir = "${WORKSPACE}"
@@ -54,13 +55,13 @@ pipeline {
                     properties.put('EmailSend', params.EmailSend)
                     properties.store(new FileWriter(propertiesFile), null) 
                     
-                    def XmlFile = 'testng.xml'
+                    XmlFile = 'testng.xml'
                     echo XmlFile
                     echo "job name ${JOB_Name}"
                   if (JOB_Name.contains('Smoke')) {
                       XmlFile = 'testngSmoke.xml'
                       echo "update file ${XmlFile}"
-                                  } 
+                        } 
                                   
                        echo XmlFile 
                     
