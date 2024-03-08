@@ -55,9 +55,11 @@ pipeline {
                     properties.store(new FileWriter(propertiesFile), null) 
                     
                     def suiteXmlFiles = 'testng.xml'
+                    echo suiteXmlFiles
                   if (JOB_Name.contains('smoke')) {
                       suiteXmlFiles = 'testngSmoke.xml'
-            }      
+                      echo "update file ${suiteXmlFiles}"
+                                  }      
                     
                 }
                 
