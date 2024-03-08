@@ -59,7 +59,7 @@ pipeline {
                     echo "job name ${JOB_Name}"
                   if (JOB_Name.contains('Smoke')) {
                       XmlFile = 'testngSmoke.xml'
-                      echo "update file ${suiteXmlFiles}"
+                      echo "update file ${XmlFile}"
                                   } 
                                   
                        echo XmlFile 
