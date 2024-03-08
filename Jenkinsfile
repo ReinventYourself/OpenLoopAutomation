@@ -77,6 +77,7 @@ pipeline {
              
              def sanitizedEnvironment = params.Env.toLowerCase()
                     echo sanitizedEnvironment
+                    echo "Docker image tag: ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${sanitizedEnvironment}"
       // Build the Docker image with the Jenkins build number as the tag
                     bat "docker build -t ${DOCKER_IMAGE_NAME}:${BUILD_VERSION}:${sanitizedEnvironment} ."
 
